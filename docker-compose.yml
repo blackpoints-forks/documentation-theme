@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+    mezzio_docs:
+        build:
+            context: docker
+        image: "mezzio_docs:alpine"
+        container_name: mezzio_docs
+        ports:
+            - "8000:8000"
+        tty: true
+        volumes:
+            - .:/src/usr/app
+        networks:
+            - mezzio_docs
+networks:
+    mezzio_docs:
+        name: mezzio_docs
