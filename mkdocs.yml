@@ -2,7 +2,7 @@ docs_dir: docs/book
 site_dir: docs/html
 extra:
   project: Mezzio
-  show_special_homepage: true
+  show_special_homepage: false
   current_version: v3
   base_url: https://docs.laminas.dev/
   versions:
@@ -261,3 +261,6 @@ theme:
 site_description: 'PSR-15 Middleware in Minutes'
 extra_css:
     - css/mezzio.css
+    - css/laminas-theme.css
+extra_javascript:
+    - js/laminas-theme.js

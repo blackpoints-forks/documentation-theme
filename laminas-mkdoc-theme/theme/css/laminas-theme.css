@@ -1,0 +1,126 @@
+/* main 
+*************************************************************************/
+[role=main]{
+    padding-right: 0;
+    padding-left: 300px;
+}
+.content{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+.content .chapter__headline{
+    color: #000;
+}
+.subnavigation__list-item--active a:link, 
+.subnavigation__list-item--active a:visited,
+.content a:link, 
+.content a:visited,
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+/* header
+*************************************************************************/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+[role=main].padding-sticky {
+    padding-top: 75px;
+}
+/* sidebar 
+*************************************************************************/
+.sidebar{
+    margin: 0;
+    width: 300px;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: 175px;
+    bottom: 0;
+    background: #fff;
+    border-right: 1px solid #e2e2e2;
+    overflow-y: auto;
+}
+.component-selector{
+    padding-left: 0;
+}
+/* menu */
+.subnavigation__link{
+    padding-left: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+.subnavigation__title,
+.subnavigation__list-item li .subnavigation__headline,
+.subnavigation__headline{
+    font-size: 1.2rem;
+    color: #000;
+    padding-left: 0;
+    padding-bottom: 5px;
+    margin: 1rem 0 0 0;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: lighter;
+}
+.subnavigation__list-item{
+    border: 0;
+}
+.subnavigation__list-item li li a,
+.subnavigation__list-item li a{
+    padding-left: 0;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+/* index
+*************************************************************************/
+.index{
+    margin-top: 3rem;
+    border-left: 1px solid #efefef;
+    padding-left: 1rem;
+    width: 300px;
+}
+.index__container{
+    position: fixed ;
+    right: 0;
+}
+.index ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.index__entry a{
+    padding: 0.2rem 0;
+}
+/* donation banner 
+*************************************************************************/
+.donation-banner{
+    margin-left: 0;
+    margin-top: 3rem;
+}
+.donation-banner h2{
+    margin: 0;
+    border: 0;
+}
+.content .donation-banner a h2,
+.content .donation-banner a p{
+    color: #fff;
+}
+.content .donation-banner a h2{
+    padding: 0 0 10px;
+}
+/* footer */
+.footer{
+    position: relative;
+    z-index: 100;
+}
+@media (min-width: 1750px){
+    .index__container {
+        position: fixed;
+        width: 18rem;
+    }
+}

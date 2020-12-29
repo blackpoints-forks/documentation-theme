@@ -30,28 +30,23 @@
     {% include "partials/header.html" %}
 
     {# Content #}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-sm-12 content" role="main">
-                {# Table of contents #}
-                {% if not page.is_homepage or config.extra.show_special_homepage %}
-                    {% include "partials/toc.html" %}
-                {% endif %}
-
-                {% block content %}
-                    {% include "partials/content.html" %}
-                {% endblock %}
-            </div>
-            <div class="col-md-3 col-sm-12 sidebar">
-                {% include "partials/donation-banner.html" %}
-
+            <div class="sidebar">
                 {% if config.site_name != 'Documentation' %}
                     {% include "partials/component-selector.html" %}
                     {% include "partials/subnavigation.html" %}
                 {% endif %}
             </div>
-        </div>
-    </div>
+            <div role="main">
+                <div class="content">
+                    {# Table of contents #}
+                    {% if not page.is_homepage or config.extra.show_special_homepage %}
+                        {% include "partials/toc.html" %}
+                    {% endif %}
+                    {% block content %}
+                        {% include "partials/content.html" %}
+                    {% endblock %}
+                </div>
+            </div>
 
     {# Footer #}
     {% include "partials/footer.html" %}
