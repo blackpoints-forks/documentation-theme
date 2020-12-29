@@ -1,14 +1,14 @@
-<div class="index__container">
+<div class="toc__container">
     {% for toc_item in page.toc %}
         {# Skip heading level 1 #}
         {# Skip entire table of contents if there are no headlines #}
         {% if toc_item.children|length > 0 %}
-            <div class="index">
-                <h6 class="index__headline">On this page</h6>
-                <ul class="index__list">
+            <div class="toc">
+                <h6 class="toc__headline">On this page</h6>
+                <ul class="toc__list">
                     {% for toc_subitem in toc_item.children %}
-                        <li class="index__entry">
-                            <a href="{{ toc_subitem.url }}" class="index__link nav-link">{{ toc_subitem.title }}</a>
+                        <li class="toc__entry">
+                            <a href="{{ toc_subitem.url }}" class="toc__link nav-link">{{ toc_subitem.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>

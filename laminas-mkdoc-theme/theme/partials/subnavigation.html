@@ -1,6 +1,6 @@
 {% if nav|length > 1 %}
     <div class="subnavigation hidden-print">
-        <h4 class="subnavigation__title">
+        <h4 class="subnavigation__title  {% if nav.homepage.active %}subnavigation__list-item--active{% endif %}">
             <a href="{{ nav.homepage.url|url }}">{{ config.site_name }}</a>
         </h4>
 
