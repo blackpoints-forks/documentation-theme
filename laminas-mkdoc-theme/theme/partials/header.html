@@ -3,7 +3,7 @@
         <div class="row">
 
             {# Headline and site name #}
-            <div class="col-8">
+            <div class="col">
                 <button class="sidebar-toggler" type="button" aria-label="Toggle navigation" data-status="open">
                     <span class="sidebar-toggler-icon"></span>
                 </button>
@@ -17,7 +17,7 @@
             </div>
 
             {# Version selector, Search and GitHub links #}
-            <div class="col-4 text-right">
+            <div class="col text-right">
                 {% if config.site_name != 'Laminas Docs' %}
                     {% include "partials/version-selector.html" %}
 

@@ -67,12 +67,18 @@ h2, .h2{
     background-repeat: no-repeat;
     background-size: 26px 26px;
 }
+.header .col-4.text-right{
+    white-space: nowrap;
+}
 .header__title a {
     color: #fff;
 }
 .header__title a:hover {
     text-decoration: none;
     color: #000609;
+}
+.header .col{
+    white-space: nowrap;
 }
 .sticky {
     position: fixed;
@@ -94,6 +100,12 @@ h2, .h2{
     .subnavigation__link:link, 
     .subnavigation__link:visited{
         color: var(--primary-color);
+    }
+    .header__link--components, 
+    .header__link--github,
+    .header__link--search {
+        display: inline-block;
+        margin-left: 10px;
     }
 }
 /* sidebar 
@@ -164,6 +176,12 @@ h2, .h2{
 }
 .content .chapter__headline {
     color: var(--body-color);
+}
+.content .anchor{
+    z-index: 0;
+}
+.content *{
+    z-index: 1;
 }
 .subnavigation__list-item--active a:link,
 .subnavigation__list-item--active a:visited,

@@ -44,11 +44,13 @@ $(function () {
     });
 
     // fix anchor position with fixed header
-    $.each($(".content [id]"), function () {
+    $.each($(".content [id]:not(h1)"), function () {
         var anchorMarginTop = parseInt($(this).css("margin-top"));
         var headerHeight = $(".header").innerHeight();
-        $(this).css("border-top", headerHeight + "px solid transparent");
-        $(this).css("margin-top", anchorMarginTop - headerHeight);
+        $(this)
+            .addClass("anchor")
+            .css("border-top", headerHeight + "px solid transparent")
+            .css("margin-top", anchorMarginTop - headerHeight);
     });
 
     // add achorjs to overview
@@ -98,7 +100,7 @@ function stickyHeader() {
  * set sidebar as open or close dependig on window width
  */
 function setSidebarOpenClose() {
-    if($('.sidebar').length){
+    if ($(".sidebar").length) {
         $("body").attr(
             "data-sidebar",
             $(window).width() < 1450 ? "closed" : "open"
