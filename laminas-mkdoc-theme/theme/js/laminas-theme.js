@@ -1,4 +1,8 @@
 $(function () {
+    // remove css transition on load
+    $(window).on("load", function () {
+        $("body").removeClass("preload");
+    });
     // sidebar - scroll to active navigation chapter (if not visible)
     if (
         $(".sidebar .subnavigation__list-item--active").length &&
@@ -19,32 +23,34 @@ $(function () {
         }
     }
     // sidebar, toc and header position
+    setSidebarOpenClose();
     setSidebarAndTocPosition();
-    setSidebarOpenClose()
     $(window).scroll(function () {
         stickyHeader();
         setSidebarAndTocPosition();
     });
     $(window).resize(function () {
+        setSidebarOpenClose();
         setSidebarAndTocPosition();
-        setSidebarOpenClose()
     });
 
     // toggle-sidebar
-    $('.sidebar-toggler').on('click', function(){
-        $('body').attr('data-sidebar', $('body').attr('data-sidebar') === 'open' 
-        ? 'closed' 
-        : 'open');
+    $(".sidebar-toggler").on("click", function () {
+        $("body").attr(
+            "data-sidebar",
+            $("body").attr("data-sidebar") === "open" ? "closed" : "open"
+        );
+        setTimeout(setSidebarAndTocPosition, 300);
     });
 
     // fix anchor position with fixed header
-    $.each($('.content [id]'), function(){
-        var anchorMarginTop = parseInt($(this).css('margin-top'));
-        var headerHeight = $('.header').innerHeight();
-        $(this).css('border-top', headerHeight + 'px solid transparent');
-        $(this).css('margin-top', anchorMarginTop - headerHeight);
+    $.each($(".content [id]"), function () {
+        var anchorMarginTop = parseInt($(this).css("margin-top"));
+        var headerHeight = $(".header").innerHeight();
+        $(this).css("border-top", headerHeight + "px solid transparent");
+        $(this).css("margin-top", anchorMarginTop - headerHeight);
     });
-    
+
     // add achorjs to overview
     anchors.add(".overview h3");
 });
@@ -92,7 +98,10 @@ function stickyHeader() {
  * set sidebar as open or close dependig on window width
  */
 function setSidebarOpenClose() {
-    $('body').attr('data-sidebar', $(window).width() < 1450 
-        ? 'closed' 
-        : 'open');
+    if($('.sidebar').length){
+        $("body").attr(
+            "data-sidebar",
+            $(window).width() < 1450 ? "closed" : "open"
+        );
+    }
 }
