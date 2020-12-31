@@ -16,4 +16,4 @@ RUN pip install nltk==3.4.5
 RUN pip install mkdocs pyaml pymdown-extensions
 WORKDIR /src/usr/app/
 ENTRYPOINT ["mkdocs"]
-CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+CMD ["serve", "--dev-addr=0.0.0.0:8005"]

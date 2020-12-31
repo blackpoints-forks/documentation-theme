@@ -6,7 +6,7 @@ services:
         image: "mezzio_docs:alpine"
         container_name: mezzio_docs
         ports:
-            - "8000:8000"
+            - "8005:8005"
         tty: true
         volumes:
             - .:/src/usr/app
