@@ -70,6 +70,11 @@ h2, .h2{
 .header .col-4.text-right{
     white-space: nowrap;
 }
+.header__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
 .header__title a {
     color: #fff;
 }
@@ -102,7 +107,6 @@ h2, .h2{
         color: var(--primary-color);
     }
     .header__link--components, 
-    .header__link--github,
     .header__link--search {
         display: inline-block;
         margin-left: 10px;
@@ -306,7 +310,29 @@ blockquote h3 {
         display: none;
     }
 }
-
+/* documentation select
+*************************************************************************/
+.laminas-selector,
+.docs-selector{
+    display: inline-block;
+}
+.laminas-selector .dropdown-toggle,
+.docs-selector .dropdown-toggle {
+    padding: 8px 13px;
+    background-color: var(--primary-color);
+    border-color: rgba(255,255,255,0.3);
+    color: #fff;
+}
+.laminas-selector .dropdown-menu,
+.docs-selector .dropdown-menu {
+    color: #212529;
+    border: 1px solid #efefef;
+    box-shadow: none;
+    background-color: var(--primary-color);
+}
+.docs-selector .dropdown-item div{
+    font-size: 0.75rem;
+}
 /* overview
 *************************************************************************/
 .docs-overview,
@@ -381,3 +407,4 @@ blockquote h3 {
         padding-top: 5px;
     }
 }
+

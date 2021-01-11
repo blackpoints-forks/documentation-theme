@@ -8,7 +8,7 @@
                 {{ config.extra.current_version }}
             {% endif %}
         </button>
-        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="version-selector-dropdown">
+        <div class="dropdown-menu" aria-labelledby="version-selector-dropdown">
             {% for version_number in config.extra.versions|sort(reverse=true) %}
                 {% for nav_item in nav if nav_item.title == version_number %}
                     <a href="{{nav_item.children[0].url|url}}" class="dropdown-item{% if page != None and version_number == page.url[:2]%} active{% endif %}">

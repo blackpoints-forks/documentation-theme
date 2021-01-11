@@ -25,14 +25,13 @@
 
     {# Navigation #}
     {% include "partials/navbar.html" %}
-
+    
     {# Header #}
     {% include "partials/header.html" %}
 
     {# Content #}
             <div class="sidebar">
                 {% if config.site_name != 'Documentation' %}
-                    {% include "partials/component-selector.html" %}
                     {% include "partials/subnavigation.html" %}
                 {% endif %}
             </div>
