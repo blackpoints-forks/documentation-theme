@@ -6,4 +6,4 @@ Design proposition for mezzio docs
 ```bash
 docker-compose up
 ```
-Serve on http://0.0.0.0:8000/
+Serve on http://0.0.0.0:8005/
