@@ -55,6 +55,7 @@ $(function () {
 
     // add achorjs to overview
     anchors.add(".overview h3");
+
 });
 
 /**
